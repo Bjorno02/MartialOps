@@ -23,12 +23,12 @@ const ROLE_RANK: Record<Role, number> = {
 const REMOVE_ERRORS: Record<string, string> = {
   insufficient_role: "You don't have authority to remove that member.",
   last_admin: "Can't remove the only admin.",
-  use_leave_endpoint: "Can't remove yourself — use Leave Gym on your profile.",
+  use_leave_endpoint: "You cannot remove yourself, so use Leave Gym on your profile instead.",
   not_a_member: "That member is no longer in the gym.",
 }
 
 const ROLE_CHANGE_ERRORS: Record<string, string> = {
-  cant_modify_self: "Can't change your own role — ask another admin.",
+  cant_modify_self: "You cannot change your own role, so ask another admin to do it.",
   last_admin: "Can't demote the only admin.",
   not_a_member: "That member is no longer in the gym.",
   invalid_input: "That role isn't valid.",

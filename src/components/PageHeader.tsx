@@ -29,7 +29,6 @@ export default function PageHeader({ label, title, meta }: Props) {
       />
 
       <div className="relative mx-auto max-w-6xl">
-        {/* Eyebrow row with pulse indicator */}
         <div
           className="mb-6 flex flex-wrap items-center gap-3"
           style={{
@@ -40,16 +39,6 @@ export default function PageHeader({ label, title, meta }: Props) {
             color: "var(--color-ink-muted)",
           }}
         >
-          <span aria-hidden="true" className="relative inline-flex h-2 w-2">
-            <span
-              className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-70"
-              style={{ backgroundColor: "var(--color-accent)" }}
-            />
-            <span
-              className="relative inline-flex h-2 w-2 rounded-full"
-              style={{ backgroundColor: "var(--color-accent)" }}
-            />
-          </span>
           <span>{label}</span>
           {meta && (
             <>
@@ -74,7 +63,7 @@ export default function PageHeader({ label, title, meta }: Props) {
         <h1
           className="gradient-text-ink"
           style={{
-            fontFamily: "var(--font-barlow)",
+            fontFamily: "var(--font-display)",
             fontWeight: 800,
             fontSize: "var(--text-display-xl)",
             lineHeight: "var(--leading-display)",

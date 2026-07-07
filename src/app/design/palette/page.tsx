@@ -67,7 +67,7 @@ function HeroMock({ v }: { v: Variant }) {
     >
       <div
         className="mx-auto max-w-6xl"
-        style={{ fontFamily: "var(--font-jakarta), sans-serif" }}
+        style={{ fontFamily: "var(--font-sans), sans-serif" }}
       >
         <div
           className="mb-8 flex flex-col gap-3 border-b pb-6 text-[11px] uppercase tracking-[0.25em]"
@@ -81,7 +81,7 @@ function HeroMock({ v }: { v: Variant }) {
               Δ {v.changed}
             </span>
           </div>
-          <span className="normal-case tracking-normal" style={{ color: v.muted, fontFamily: "var(--font-jakarta), sans-serif" }}>
+          <span className="normal-case tracking-normal" style={{ color: v.muted, fontFamily: "var(--font-sans), sans-serif" }}>
             {v.note}
           </span>
         </div>
@@ -96,7 +96,7 @@ function HeroMock({ v }: { v: Variant }) {
         <h1
           className="font-extrabold uppercase"
           style={{
-            fontFamily: "var(--font-barlow), sans-serif",
+            fontFamily: "var(--font-display), sans-serif",
             fontSize: "clamp(72px, 13vw, 180px)",
             lineHeight: 0.82,
             letterSpacing: "-0.02em",
@@ -130,7 +130,7 @@ function HeroMock({ v }: { v: Variant }) {
               <div
                 className="font-bold"
                 style={{
-                  fontFamily: "var(--font-barlow), sans-serif",
+                  fontFamily: "var(--font-display), sans-serif",
                   fontSize: "clamp(32px, 5vw, 64px)",
                   lineHeight: 1,
                   letterSpacing: "-0.01em",

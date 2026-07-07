@@ -182,7 +182,7 @@ export default function CalendarPanel({
             </button>
             <span
               style={{
-                fontFamily: "var(--font-barlow)",
+                fontFamily: "var(--font-display)",
                 fontWeight: 800,
                 fontSize: "20px",
                 textTransform: "uppercase",
@@ -265,7 +265,7 @@ export default function CalendarPanel({
                 >
                   <span
                     style={{
-                      fontFamily: "var(--font-barlow)",
+                      fontFamily: "var(--font-display)",
                       fontWeight: 700,
                       fontSize: "14px",
                       lineHeight: 1,
@@ -306,7 +306,7 @@ export default function CalendarPanel({
           >
             <span
               style={{
-                fontFamily: "var(--font-barlow)",
+                fontFamily: "var(--font-display)",
                 fontWeight: 800,
                 fontSize: "var(--text-display-sm)",
                 textTransform: "uppercase",
@@ -395,7 +395,7 @@ export default function CalendarPanel({
                         <span>Ready</span>
                         <span
                           style={{
-                            fontFamily: "var(--font-barlow)",
+                            fontFamily: "var(--font-display)",
                             fontWeight: 800,
                             fontSize: "20px",
                             color: "var(--color-accent)",
@@ -452,7 +452,7 @@ export default function CalendarPanel({
                         </p>
                         <span
                           style={{
-                            fontFamily: "var(--font-barlow)",
+                            fontFamily: "var(--font-display)",
                             fontWeight: 700,
                             fontSize: "18px",
                             color: "var(--color-ink)",

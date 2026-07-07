@@ -87,7 +87,7 @@ export default function Footer() {
             <DoubleHeadedEagle size={36} color="var(--color-canvas)" />
             <span
               style={{
-                fontFamily: "var(--font-barlow)",
+                fontFamily: "var(--font-display)",
                 fontWeight: 800,
                 fontSize: "24px",
                 textTransform: "uppercase",

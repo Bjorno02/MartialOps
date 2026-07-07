@@ -74,7 +74,7 @@ function ActionCard({
           <h2
             className="mb-4 gradient-text-ink"
             style={{
-              fontFamily: "var(--font-barlow)",
+              fontFamily: "var(--font-display)",
               fontWeight: 800,
               fontSize: "var(--text-display-md)",
               lineHeight: "var(--leading-display)",
@@ -150,7 +150,7 @@ export default function HomeCards({ isCoach }: Props) {
           num="01"
           label="Athlete"
           title="Log Training"
-          desc="Record today's session and daily check-in. Stay honest with yourself."
+          desc="This is where you record today's training session and take your daily check-in."
           delay={0.1}
           icon="sword"
         />
@@ -160,7 +160,7 @@ export default function HomeCards({ isCoach }: Props) {
             num="02"
             label="Coach"
             title="Dashboard"
-            desc="See athlete load and readiness across the gym. Approve new members."
+            desc="This is where you see athlete load and readiness across the gym, and generate invite codes when new members arrive."
             delay={0.2}
             icon="eagle"
           />

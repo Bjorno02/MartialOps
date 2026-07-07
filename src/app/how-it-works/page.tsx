@@ -111,7 +111,7 @@ function SectionBlock({
           <h2
             className="mb-12"
             style={{
-              fontFamily: "var(--font-barlow)",
+              fontFamily: "var(--font-display)",
               fontWeight: 800,
               fontSize: "var(--text-display-lg)",
               lineHeight: "var(--leading-display)",
@@ -133,7 +133,7 @@ function SectionBlock({
             }}
           >
             <div
-              className="text-lg md:text-xl [&>p]:leading-[1.75] [&>p:first-child::first-letter]:float-left [&>p:first-child::first-letter]:pr-3 [&>p:first-child::first-letter]:pt-1 [&>p:first-child::first-letter]:leading-[0.82] [&>p:first-child::first-letter]:font-[family-name:var(--font-barlow)] [&>p:first-child::first-letter]:text-[5.5rem] [&>p:first-child::first-letter]:font-extrabold [&>p:first-child::first-letter]:uppercase [&>p:first-child::first-letter]:text-[color:var(--color-accent)]"
+              className="text-lg md:text-xl [&>p]:leading-[1.75] [&>p:first-child::first-letter]:float-left [&>p:first-child::first-letter]:pr-3 [&>p:first-child::first-letter]:pt-1 [&>p:first-child::first-letter]:leading-[0.82] [&>p:first-child::first-letter]:font-[family-name:var(--font-display)] [&>p:first-child::first-letter]:text-[5.5rem] [&>p:first-child::first-letter]:font-extrabold [&>p:first-child::first-letter]:uppercase [&>p:first-child::first-letter]:text-[color:var(--color-accent)]"
             >
               {children}
             </div>
@@ -263,7 +263,7 @@ export default function HowItWorksPage() {
               <span style={{ color: "var(--color-accent)" }}>[</span>Guide
               <span style={{ color: "var(--color-accent)" }}>]</span>
             </span>
-            <span>—</span>
+            <span style={{ color: "var(--color-ink-faint)" }}>·</span>
             <span>The Method</span>
             <span>·</span>
             <span style={{ color: "var(--color-ink-faint)" }}>
@@ -275,7 +275,7 @@ export default function HowItWorksPage() {
           <h1
             className="gradient-text-ink"
             style={{
-              fontFamily: "var(--font-barlow)",
+              fontFamily: "var(--font-display)",
               fontWeight: 800,
               fontSize: "var(--text-display-xxl)",
               lineHeight: "var(--leading-display)",
@@ -345,14 +345,12 @@ export default function HowItWorksPage() {
               textWrap: "pretty",
             }}
           >
-            Fitore reduces training to two honest numbers.{" "}
-            <strong style={{ color: "var(--color-accent)" }}>Readiness</strong> tells you
-            what you can do today.{" "}
-            <strong style={{ color: "var(--color-accent)" }}>Training Load</strong> tells
-            you what you actually did.{" "}
-            <em style={{ color: "var(--color-ink)", fontStyle: "italic", fontWeight: 600 }}>
-              Everything else is noise.
-            </em>
+            Fitore tracks two numbers across your training: a{" "}
+            <strong style={{ color: "var(--color-accent)" }}>Readiness</strong> score,
+            which tells you what you can do today, and a{" "}
+            <strong style={{ color: "var(--color-accent)" }}>Training Load</strong>{" "}
+            score, which tells you what you actually did yesterday, last week, and the
+            month before that.
           </motion.p>
 
           {/* Meta strip below hero */}
@@ -395,18 +393,17 @@ export default function HowItWorksPage() {
       <SectionBlock
         number="01"
         roman="I"
-        marginalia="Inputs: sleep, soreness, stress, injury. Output: 1–100. A report card for your body."
+        marginalia="A short questionnaire about sleep, soreness, stress, and injury that produces a score from 1 to 100."
         title="The Readiness Score"
-        tldr="100 means ready for war. 1 means call your doctor."
+        tldr="A 100 means you are rested and ready, and a 1 means it is probably time to call the doctor before you train again."
       >
         <p>
-          Readiness is an extraordinarily simple metric. If you have ever attended a school
-          or received a report card, you&apos;ll find that you can understand it. You simply
-          input your sleep, soreness, and stress (and check the injury box if you&apos;re
-          hurt), and a score between 1–100 is generated. A score of 100 means you are at
-          peak form and perhaps could even chin Francis Ngannou. A score of 1 means you
-          probably need to completely change your life and habits before you become victim
-          to a decaying body.
+          Readiness works the way a school report card works. You feed it your sleep,
+          your soreness, your stress, and whether you came home from training in one
+          piece, and it gives you back a number somewhere between 1 and 100. A score of
+          100 means you could probably try to chin Francis Ngannou and live to tell
+          about it. A score of 1 means you should rest, eat well, and reconsider some of
+          the recent decisions that brought you to a 1.
         </p>
       </SectionBlock>
 
@@ -416,18 +413,17 @@ export default function HowItWorksPage() {
       <SectionBlock
         number="02"
         roman="II"
-        marginalia="Duration × intensity × type modifier. One number, no units, no ceiling."
+        marginalia="Duration multiplied by intensity multiplied by a type modifier produces a single number that captures the day's effort."
         title="The Training Load"
-        tldr="Big number means you trained hard. Whether that's smart or stupid is on you."
+        tldr="A bigger number means you trained harder, and whether that was a good idea or not is a matter you can take up with yourself in the morning."
       >
         <p>
-          Training load is, at its core, also embarrassingly simple to grasp. You log how
-          long you trained, how hard it felt on a scale of 1–10, and what type of session
-          it was. The system multiplies these together and applies a modifier based on
-          training type — because five rounds of live sparring is not the same as five
-          rounds of shadow boxing, and pretending otherwise is how people get hurt. The
-          resulting number is your load. No units, no ceiling, just an honest reflection of
-          how much you actually put in.
+          Training load is also straightforward. You log how long you trained, how hard
+          it felt on a scale of 1 to 10, and what type of session it was, and the system
+          multiplies these together and applies a modifier based on training type. Five
+          rounds of live sparring is not the same as five rounds of shadow boxing, and
+          pretending otherwise is how people get hurt. The resulting number is your
+          load, and it serves as an honest reflection of how much you actually put in.
         </p>
       </SectionBlock>
 
@@ -482,13 +478,13 @@ export default function HowItWorksPage() {
             }}
           >
             <span style={{ color: "var(--color-ink)" }}>[Credo]</span>
-            <span>—</span>
+            <span style={{ color: "var(--color-ink-faint)" }}>·</span>
             <span>The Thesis</span>
           </motion.div>
 
           <h2
             style={{
-              fontFamily: "var(--font-barlow)",
+              fontFamily: "var(--font-display)",
               fontWeight: 800,
               fontSize: "var(--text-display-xxl)",
               lineHeight: "var(--leading-display)",
@@ -503,7 +499,7 @@ export default function HowItWorksPage() {
                 animate={inversionInView ? { y: 0 } : {}}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
               >
-                The rest
+                Two numbers
               </motion.div>
             </div>
             <div style={{ overflow: "hidden" }}>
@@ -517,25 +513,8 @@ export default function HowItWorksPage() {
                 }}
                 style={{ display: "inline-block" }}
               >
-                Is noise
+                Will do
               </motion.div>
-              <motion.span
-                style={{
-                  color: "var(--color-ink)",
-                  display: "inline-block",
-                }}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={inversionInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{
-                  delay: 1.0,
-                  duration: 0.5,
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 12,
-                }}
-              >
-                .
-              </motion.span>
             </div>
           </h2>
 
@@ -553,7 +532,6 @@ export default function HowItWorksPage() {
               color: "rgba(242, 232, 213, 0.75)",
             }}
           >
-            <span>—</span>
             <span>Fitore Method · No. 01</span>
             <span style={{ color: "var(--color-ink)" }}>§</span>
           </motion.div>

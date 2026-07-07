@@ -173,7 +173,7 @@ function HeroMock({ v }: { v: WarmVariant }) {
         {/* Stacked headline */}
         <h2
           style={{
-            fontFamily: "var(--font-barlow)",
+            fontFamily: "var(--font-display)",
             fontWeight: 800,
             fontSize: "clamp(56px, 9vw, 128px)",
             lineHeight: 0.85,
@@ -249,7 +249,7 @@ function HeroMock({ v }: { v: WarmVariant }) {
                 color: v.canvas,
                 textAlign: "center",
                 lineHeight: "20px",
-                fontFamily: "var(--font-barlow)",
+                fontFamily: "var(--font-display)",
                 fontWeight: 800,
                 fontSize: "11px",
               }}
@@ -271,7 +271,7 @@ function HeroMock({ v }: { v: WarmVariant }) {
                 color: v.canvas,
                 textAlign: "center",
                 lineHeight: "20px",
-                fontFamily: "var(--font-barlow)",
+                fontFamily: "var(--font-display)",
                 fontWeight: 800,
                 fontSize: "11px",
               }}

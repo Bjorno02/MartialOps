@@ -242,7 +242,7 @@ export default function MobileNav({ links, active, all }: Props) {
                             onClick={() => setOpen(false)}
                             className="flex items-baseline gap-4 py-3"
                             style={{
-                              fontFamily: "var(--font-barlow)",
+                              fontFamily: "var(--font-display)",
                               fontWeight: 700,
                               fontSize: "20px",
                               letterSpacing: "0.04em",

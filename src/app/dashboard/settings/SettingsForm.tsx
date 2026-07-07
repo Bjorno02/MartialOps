@@ -67,7 +67,7 @@ function SettingRow({
         style={{
           borderColor: "var(--color-rule-strong)",
           color: "var(--color-ink)",
-          fontFamily: "var(--font-barlow)",
+          fontFamily: "var(--font-display)",
           fontWeight: 700,
         }}
       />

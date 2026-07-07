@@ -24,7 +24,7 @@ function MiniHero({ title, note }: { title: string; note: string }) {
 
       <h2
         style={{
-          fontFamily: "var(--font-barlow)",
+          fontFamily: "var(--font-display)",
           fontWeight: 800,
           fontSize: "clamp(48px, 8vw, 104px)",
           lineHeight: 0.88,

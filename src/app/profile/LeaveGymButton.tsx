@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 
 const LEAVE_ERRORS: Record<string, string> = {
-  last_admin: "You're the only admin — promote someone else or close the gym first.",
+  last_admin: "You are the only admin, so you will need to promote someone else or close the gym first.",
   not_a_member: "You're not a member of this gym anymore.",
   missing_gymId: "Couldn't determine which gym to leave.",
 }
