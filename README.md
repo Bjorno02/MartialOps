@@ -161,11 +161,14 @@ npm test                   # one-shot
 npm run test:watch         # watcher
 ```
 
-End-to-end tests live in `e2e/` and currently lock down the auth perimeter — every protected page redirects unauthenticated visitors to sign-in, and every protected API route returns `401`. Three suites:
+End-to-end tests live in `e2e/` (21 cases across six suites). Most lock down the auth perimeter — every protected page redirects unauthenticated visitors to sign-in, and every protected API route returns `401` — plus a mobile-viewport suite:
 
 - `e2e/auth.spec.ts` — page redirects (`/dashboard`, `/athlete`, `/athlete/history`) + `POST /api/sessions` returns 401
-- `e2e/onboarding-api.spec.ts` — every `/api/gyms*` route returns 401 without a session
 - `e2e/dashboard-api.spec.ts` — `/api/dashboard/{day,summary}` return 401 without a session
+- `e2e/invite-codes.spec.ts` — generate/list/revoke/redeem invite-code routes all require auth
+- `e2e/memberships.spec.ts` — roster, remove-member, change-role, and leave-gym routes all require auth
+- `e2e/sessions-checkins.spec.ts` — session and check-in edit/delete routes all require auth
+- `e2e/mobile.spec.ts` — no horizontal overflow at 375px, gated-route redirect on mobile, touch-target floor on the sign-in button
 
 ```bash
 npm run test:e2e           # auto-starts dev server on :3000 if none is running
@@ -185,7 +188,7 @@ MartialOps/
 ├── docker-compose.yml             # local Postgres 16 on :5432
 ├── docs/                          # (gitignored) local dev notes
 ├── prisma/
-│   ├── schema.prisma              # models: User, Gym, Membership, TrainingSession, CheckIn, GymSettings, NextAuth tables
+│   ├── schema.prisma              # 9 models: User, Gym, Membership, TrainingSession, CheckIn, InviteCode, GymSettings + NextAuth (Account, Session)
 │   ├── migrations/                # committed migration history
 │   └── seed.ts                    # dev user + gym + membership
 ├── src/
@@ -242,7 +245,7 @@ MartialOps/
 │   ├── auth.ts                    # NextAuth entry
 │   ├── auth.config.ts             # NextAuth config
 │   └── generated/prisma/          # (gitignored) generated Prisma client
-├── e2e/                           # Playwright auth-perimeter tests (auth.spec.ts, onboarding-api.spec.ts, dashboard-api.spec.ts)
+├── e2e/                           # Playwright suites: auth, dashboard-api, invite-codes, memberships, sessions-checkins, mobile
 ├── public/
 │   ├── double-headed-eagle.svg
 │   └── theme-init.js              # applies theme before hydration
@@ -280,7 +283,7 @@ Typographic system uses Barlow (display, 800) for brutalist headings and Jakarta
 5. Connect a Postgres provider (Neon, Supabase, Vercel Postgres, Railway, etc.) and use its connection string as `DATABASE_URL`.
 6. Deploy.
 
-**First deploy** runs `prisma migrate deploy` (applies the 5 committed migrations) before `next build`. Subsequent deploys apply any new migrations automatically. If a migration fails, the build fails — the bad code never reaches production.
+**First deploy** runs `prisma migrate deploy` (applies the 7 committed migrations) before `next build`. Subsequent deploys apply any new migrations automatically. If a migration fails, the build fails — the bad code never reaches production.
 
 ---
 
