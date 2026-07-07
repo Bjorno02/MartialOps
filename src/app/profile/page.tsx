@@ -71,23 +71,13 @@ export default async function ProfilePage() {
             color: "var(--color-ink-muted)",
           }}
         >
-          <span
-            aria-hidden="true"
-            className="inline-block"
-            style={{
-              width: "6px",
-              height: "6px",
-              backgroundColor: "var(--color-accent)",
-              transform: "rotate(45deg)",
-            }}
-          />
-          <span>[Profile] — Your Record</span>
+          <span>[Profile] · Your Record</span>
         </div>
 
         <h1
           className="gradient-text-ink"
           style={{
-            fontFamily: "var(--font-barlow)",
+            fontFamily: "var(--font-display)",
             fontWeight: 800,
             fontSize: "var(--text-display-lg)",
             lineHeight: "var(--leading-display)",

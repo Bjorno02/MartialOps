@@ -64,7 +64,7 @@ export default async function Navbar() {
             <div className="flex flex-col leading-none">
               <span
                 style={{
-                  fontFamily: "var(--font-barlow)",
+                  fontFamily: "var(--font-display)",
                   fontWeight: 800,
                   fontSize: "22px",
                   textTransform: "uppercase",
@@ -119,72 +119,48 @@ export default async function Navbar() {
           />
 
           <div className="hidden items-stretch lg:flex">
-            {links.map((l, i) => (
-              <div key={l.href} className="flex items-stretch">
-                {i > 0 && (
-                  <span
-                    aria-hidden="true"
-                    className="flex items-center"
-                    style={{
-                      color: "rgba(246, 220, 159, 0.25)",
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "11px",
-                    }}
-                  >
-                    ·
-                  </span>
-                )}
-                <Link
-                  href={l.href}
-                  className="group relative flex items-center px-3 text-[10px] tracking-[0.14em] transition-opacity hover:opacity-100 xl:px-4 xl:text-[11px] xl:tracking-[0.2em]"
+            {links.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="group relative flex items-center px-4 text-[10px] tracking-[0.18em] transition-opacity hover:opacity-100 lg:px-5 xl:px-6 xl:text-[11px]"
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontWeight: 500,
+                  textTransform: "uppercase",
+                  color: "var(--color-canvas)",
+                  opacity: 0.75,
+                }}
+              >
+                <span>{l.label}</span>
+                <span
+                  aria-hidden="true"
+                  className="absolute bottom-2 left-4 right-4 origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100 lg:left-5 lg:right-5 xl:left-6 xl:right-6"
                   style={{
-                    fontFamily: "var(--font-mono)",
-                    fontWeight: 500,
-                    textTransform: "uppercase",
-                    color: "var(--color-canvas)",
-                    opacity: 0.75,
+                    height: "2px",
+                    background:
+                      "linear-gradient(90deg, transparent, var(--color-accent-bright) 50%, transparent)",
+                    boxShadow: "0 0 8px var(--color-accent-bright)",
                   }}
-                >
-                  <span>{l.label}</span>
-                  <span
-                    aria-hidden="true"
-                    className="absolute bottom-2 left-3 right-3 origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100 xl:left-4 xl:right-4"
-                    style={{
-                      height: "2px",
-                      background:
-                        "linear-gradient(90deg, transparent, var(--color-accent-bright) 50%, transparent)",
-                      boxShadow: "0 0 8px var(--color-accent-bright)",
-                    }}
-                  />
-                </Link>
-              </div>
+                />
+              </Link>
             ))}
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-5 lg:gap-6">
           <div className="hidden lg:inline-flex">
             <ThemeToggle />
           </div>
-          <span
-            aria-hidden="true"
-            className="hidden lg:inline"
-            style={{
-              color: "rgba(246, 220, 159, 0.25)",
-              fontFamily: "var(--font-mono)",
-              fontSize: "11px",
-            }}
-          >
-            ·
-          </span>
           <Link
             href="/profile"
             aria-label="Profile"
-            className="group flex flex-col items-center gap-1 py-3 transition-transform hover:-translate-y-0.5"
+            className="group flex flex-row items-center gap-2.5 transition-opacity hover:opacity-100"
+            style={{ opacity: 0.9 }}
           >
             <svg
-              width="22"
-              height="22"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               aria-hidden="true"
               style={{
@@ -208,14 +184,14 @@ export default async function Navbar() {
             </svg>
             {session.user.name && (
               <span
+                className="hidden xl:inline"
                 style={{
                   fontFamily: "var(--font-mono)",
-                  fontSize: "10px",
+                  fontSize: "11px",
                   fontWeight: 500,
                   textTransform: "uppercase",
                   letterSpacing: "0.18em",
                   color: "var(--color-canvas)",
-                  opacity: 0.85,
                   lineHeight: 1,
                 }}
               >
@@ -223,17 +199,6 @@ export default async function Navbar() {
               </span>
             )}
           </Link>
-          <span
-            aria-hidden="true"
-            className="hidden lg:inline"
-            style={{
-              color: "rgba(246, 220, 159, 0.25)",
-              fontFamily: "var(--font-mono)",
-              fontSize: "11px",
-            }}
-          >
-            ·
-          </span>
           <div className="hidden lg:inline-flex">
             <SignOutButton />
           </div>

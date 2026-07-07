@@ -212,7 +212,7 @@ export default function AthleteForm({ gymId }: { gymId: string }) {
         sessionStatus.setSuccess("Session logged.")
       }
     } catch {
-      sessionStatus.setError("Network error — try again")
+      sessionStatus.setError("Could not reach the server, please try again.")
     } finally {
       setSessionLoading(false)
     }
@@ -256,7 +256,7 @@ export default function AthleteForm({ gymId }: { gymId: string }) {
         checkinStatus.setSuccess("Check-in submitted.")
       }
     } catch {
-      checkinStatus.setError("Network error — try again")
+      checkinStatus.setError("Could not reach the server, please try again.")
     } finally {
       setCheckinLoading(false)
     }

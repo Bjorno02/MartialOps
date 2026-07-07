@@ -61,18 +61,6 @@ export default function HomeHero({ gymName, userName }: Props) {
             color: "var(--color-ink-muted)",
           }}
         >
-          <span aria-hidden="true" className="relative inline-flex h-2 w-2">
-            <span
-              className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60"
-              style={{ backgroundColor: "var(--color-accent)" }}
-            />
-            <span
-              className="relative inline-flex h-2 w-2 rounded-full"
-              style={{ backgroundColor: "var(--color-accent)" }}
-            />
-          </span>
-          <span style={{ color: "var(--color-ink)" }}>Live</span>
-          <span style={{ color: "var(--color-ink-faint)" }}>·</span>
           <span>{dateStr}</span>
           {userName && (
             <>
@@ -108,7 +96,7 @@ export default function HomeHero({ gymName, userName }: Props) {
             <span style={{ color: "var(--color-accent)" }}>[</span>Home
             <span style={{ color: "var(--color-accent)" }}>]</span>
           </span>
-          <span>—</span>
+          <span style={{ color: "var(--color-ink-faint)" }}>·</span>
           <span>Welcome back</span>
         </motion.div>
 
@@ -116,7 +104,7 @@ export default function HomeHero({ gymName, userName }: Props) {
         <h1
           className="gradient-text-ink"
           style={{
-            fontFamily: "var(--font-barlow)",
+            fontFamily: "var(--font-display)",
             fontWeight: 800,
             fontSize: "var(--text-display-xl)",
             lineHeight: "var(--leading-display)",
@@ -168,11 +156,8 @@ export default function HomeHero({ gymName, userName }: Props) {
             color: "var(--color-ink-soft)",
           }}
         >
-          Pick up where you left off. Log a session, check in for the day, or step
-          into the coach dashboard.{" "}
-          <em style={{ color: "var(--color-accent)", fontWeight: 600, fontStyle: "italic" }}>
-            Two numbers, no noise.
-          </em>
+          You can log today&apos;s session, take your daily check-in, and step into
+          the coach dashboard if that is part of what you do here.
         </motion.p>
       </div>
     </section>

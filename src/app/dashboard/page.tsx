@@ -91,7 +91,7 @@ export default async function DashboardPage() {
                 <div key={stat.label} className="flex flex-col">
                   <span
                     style={{
-                      fontFamily: "var(--font-barlow)",
+                      fontFamily: "var(--font-display)",
                       fontWeight: 800,
                       fontSize: "var(--text-display-md)",
                       lineHeight: 1,
@@ -141,7 +141,7 @@ export default async function DashboardPage() {
             <div className="mt-4 flex items-end justify-between w-full">
               <span
                 style={{
-                  fontFamily: "var(--font-barlow)",
+                  fontFamily: "var(--font-display)",
                   fontWeight: 800,
                   fontSize: "var(--text-display-sm)",
                   lineHeight: 1,

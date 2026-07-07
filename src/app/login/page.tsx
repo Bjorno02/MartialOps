@@ -61,23 +61,13 @@ export default function LoginPage() {
             color: "var(--color-ink-muted)",
           }}
         >
-          <span
-            aria-hidden="true"
-            className="inline-block"
-            style={{
-              width: "6px",
-              height: "6px",
-              backgroundColor: "var(--color-accent)",
-              transform: "rotate(45deg)",
-            }}
-          />
           <span>§ 00 · Sign In</span>
         </motion.div>
 
         <h1
           className="gradient-text-ink max-w-full"
           style={{
-            fontFamily: "var(--font-barlow)",
+            fontFamily: "var(--font-display)",
             fontWeight: 800,
             fontSize: "var(--text-display-xl)",
             lineHeight: "var(--leading-display)",
@@ -91,36 +81,8 @@ export default function LoginPage() {
               animate={{ y: 0 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
-              Ready When
+              Welcome back
             </motion.div>
-          </div>
-          <div style={{ overflow: "hidden" }}>
-            <motion.div
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.7, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
-              style={{ display: "inline-block" }}
-            >
-              You Are
-            </motion.div>
-            <motion.span
-              style={{
-                color: "var(--color-accent)",
-                WebkitTextFillColor: "var(--color-accent)",
-                display: "inline-block",
-              }}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.8,
-                duration: 0.45,
-                type: "spring",
-                stiffness: 260,
-                damping: 12,
-              }}
-            >
-              .
-            </motion.span>
           </div>
         </h1>
 
@@ -136,7 +98,7 @@ export default function LoginPage() {
             color: "var(--color-ink-soft)",
           }}
         >
-          Your gym is waiting. Sign in with Google to pick up where you left off.
+          Sign in with the Google account associated with your gym membership.
         </motion.p>
 
         <motion.div

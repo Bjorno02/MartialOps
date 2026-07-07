@@ -124,23 +124,13 @@ export default function OnboardingPage() {
             color: "var(--color-ink-muted)",
           }}
         >
-          <span
-            aria-hidden="true"
-            className="inline-block"
-            style={{
-              width: "6px",
-              height: "6px",
-              backgroundColor: "var(--color-accent)",
-              transform: "rotate(45deg)",
-            }}
-          />
-          <span>Welcome · Pick A Lane</span>
+          <span>Welcome · Choose How To Join</span>
         </motion.div>
 
         <h1
           className="gradient-text-ink"
           style={{
-            fontFamily: "var(--font-barlow)",
+            fontFamily: "var(--font-display)",
             fontWeight: 800,
             fontSize: "var(--text-display-xl)",
             lineHeight: "var(--leading-display)",
@@ -227,7 +217,7 @@ export default function OnboardingPage() {
             <h2
               className="mb-8"
               style={{
-                fontFamily: "var(--font-barlow)",
+                fontFamily: "var(--font-display)",
                 fontWeight: 800,
                 fontSize: "var(--text-display-md)",
                 lineHeight: "var(--leading-display)",
@@ -355,7 +345,7 @@ export default function OnboardingPage() {
             <h2
               className="mb-8"
               style={{
-                fontFamily: "var(--font-barlow)",
+                fontFamily: "var(--font-display)",
                 fontWeight: 800,
                 fontSize: "var(--text-display-md)",
                 lineHeight: "var(--leading-display)",
@@ -376,7 +366,7 @@ export default function OnboardingPage() {
                 color: "var(--color-ink-soft)",
               }}
             >
-              Your coach will give you a code. Type it in and you&apos;re in — no waiting.
+              Your coach will give you a code, and once you type it in you will be added to the gym roster.
             </p>
 
             <form onSubmit={handleRedeem} className="flex flex-col gap-5">

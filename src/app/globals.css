@@ -70,16 +70,16 @@
   --gradient-canvas:       linear-gradient(180deg, var(--color-canvas-pale) 0%, var(--color-canvas) 100%);
 
   /* ── Typography ──────────────────────────────────────────── */
-  --font-display: var(--font-barlow);
-  --font-sans:    var(--font-jakarta);
-  --font-mono:    ui-monospace, "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --font-display: var(--font-fraunces);
+  --font-sans:    var(--font-inter);
+  --font-mono:    var(--font-space-mono), ui-monospace, "SFMono-Regular", Consolas, monospace;
 
-  /* Brutalist display scale — clamped for responsive headers */
-  --text-display-xxl: clamp(72px, 13vw, 200px);
-  --text-display-xl:  clamp(56px, 9vw, 140px);
-  --text-display-lg:  clamp(40px, 6vw, 96px);
-  --text-display-md:  clamp(28px, 4vw, 56px);
-  --text-display-sm:  clamp(20px, 2.6vw, 36px);
+  /* Display scale — clamped for responsive headers (tuned for Fraunces serif) */
+  --text-display-xxl: clamp(60px, 10.5vw, 168px);
+  --text-display-xl:  clamp(48px, 7.5vw, 120px);
+  --text-display-lg:  clamp(36px, 5.2vw, 84px);
+  --text-display-md:  clamp(24px, 3.4vw, 48px);
+  --text-display-sm:  clamp(18px, 2.2vw, 32px);
 
   --text-eyebrow:     11px;
   --text-caption:     12px;
@@ -87,9 +87,9 @@
   --tracking-eyebrow: 0.3em;
   --tracking-label:   0.2em;
   --tracking-tight:   -0.02em;
-  --tracking-display: -0.015em;
+  --tracking-display: -0.005em;
 
-  --leading-display:  0.85;
+  --leading-display:  0.95;
   --leading-tight:    1.05;
 }
 
@@ -195,6 +195,11 @@
   html, body { min-height: 100%; }
 
   body {
+    /* tailwind v4 @property typed-registers font tokens — var() in alias must resolve where next/font lives (body) */
+    --font-display: var(--font-fraunces);
+    --font-sans:    var(--font-inter);
+    --font-mono:    var(--font-space-mono), ui-monospace, "SFMono-Regular", Consolas, monospace;
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -208,7 +213,7 @@
       var(--color-canvas);
     background-attachment: fixed;
     color: var(--color-ink);
-    font-family: var(--font-jakarta), sans-serif;
+    font-family: var(--font-sans), sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
